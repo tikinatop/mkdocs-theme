@@ -1,0 +1,13 @@
+{%- for nav_item in nav %}
+{%- if (nav_item.children and nav_item.active) %}
+{%- for nav_item in nav_item.children %}
+
+ <p>{{ nav_item.title }}</p>
+
+{%- if nav_item.children %}
+
+ {%- endif %}
+
+{%- endfor %}
+{%- endif %}
+{%- endfor %}
